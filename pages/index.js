@@ -5,12 +5,11 @@ import { useRouter } from 'next/router';
 
 const Home = () => {
   const { data: session } = useSession();
-  console.log(session);
 
   const { push, asPath } = useRouter();
 
   const handleSignOut = async () => {
-    const data = await signOut({ redirect: false, callbackUrl: '/' });
+    const data = await signOut({ redirect: false, callbackUrl: '/some' });
     push(data.url);
   };
 

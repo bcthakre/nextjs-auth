@@ -29,8 +29,6 @@ const providers = [
 const Signin = () => {
   const { data: session, status } = useSession();
 
-  console.log(process.env.GITHUB_ID);
-
   const { push } = useRouter();
 
   const [email, setEmail] = useState();
@@ -39,7 +37,7 @@ const Signin = () => {
 
   if (session) {
     setTimeout(() => {
-      push('/');
+      push('/some');
     }, 5000);
     return <Heading>You are already sign in!!!</Heading>;
   }
