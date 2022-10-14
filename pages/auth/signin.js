@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { signIn, useSession } from 'next-auth/react';
-import { BsGithub, BsGoogle, BsTwitter } from 'react-icons/bs';
+import { BsGithub, BsGoogle } from 'react-icons/bs';
 import Head from 'next/head';
 
 const providers = [
